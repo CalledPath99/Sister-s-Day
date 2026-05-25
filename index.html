@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Sister 🌺💝</title>
+    <style>
+        h1 {
+            color: red;
+        }
+        p {
+            color: blue;
+            background-color: yellow;
+            font-size: 20px;
+            font-style: italic;
+        }
+        ol {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+            color: brown;
+        }
+        .button-row {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 18px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 6px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056c1;
+        }
+        .message-box {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            max-width: 560px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>My baddie and cutie Sister</h1>
+    <p>
+        My sister is the best person in the world I have ever met. She is always there for me whenever nobody's there for me.
+    </p>
+    <ol>
+        <li>You are a baddie</li>
+        <li>You are cutie</li>
+        <li>You are kind</li>
+        <li>You are gorgeous</li>
+    </ol>
+    <ul>
+        <li>And many more things that I can't even list because there are so many things.</li>
+    </ul>
+    <div class="button-row">
+        <button id="acceptBtn">Click this if you accept these all</button>
+        <button id="declineBtn">Click this if you don't accept these</button>
+    </div>
+    <div id="messageBox" class="message-box" style="display:none;"></div>
+    <script>
+        const messageBox = document.getElementById('messageBox');
+        const acceptBtn = document.getElementById('acceptBtn');
+        const declineBtn = document.getElementById('declineBtn');
+
+        acceptBtn.addEventListener('click', () => {
+            const confirmed = confirm('Are you sure you want to accept?');
+            if (!confirmed) return;
+            messageBox.style.display = 'block';
+            messageBox.innerHTML = '<h2>Thank you for accepting!</h2><p>You are always right my dear sister!</p>';
+        });
+
+        declineBtn.addEventListener('click', () => {
+            const confirmed = confirm('Are you sure you want to decline?');
+            if (!confirmed) return;
+            messageBox.style.display = 'block';
+            messageBox.innerHTML = '<h2>You are wrong at this one!</h2><p>You are always right my dear sister but not in this case!</p>';
+        });
+    </script>
+</body>
+</html>
